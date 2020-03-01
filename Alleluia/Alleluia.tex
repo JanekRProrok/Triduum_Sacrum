@@ -7,6 +7,9 @@
 \onehalfspacing
 \setlength{\parindent}{0cm} 
 
+\usepackage{enumitem}
+\renewcommand{\labelitemi}{$\bullet$}	
+
 \usepackage[]{hyperref}
 \usepackage{hyperref,xcolor}% http://ctan.org/pkg/{hyperref,xcolor}
 \usepackage{makeidx}
@@ -14,7 +17,7 @@
 \definecolor{orangelink}{rgb}{0.7,0.18,0.1} 
 
 \hypersetup{
-    pdftitle={Alleluia Pasquale - Dominica Paschæ in Resurrectione Domini - Ad Vigiliam Paschalem in Nocte Santa},
+    pdftitle={Alleluia Pasquale – Dominica Paschæ in Resurrectione Domini – Ad Vigiliam Paschalem in Nocte Santa},
     pdfdisplaydoctitle=true,
     pdfauthor={pitrk, JanekR_Prorok},
     pdfsubject={Source: https://github.com/JanekRProrok/Triduum_Sacrum},
@@ -71,10 +74,10 @@
 \bigskip
 
 Przykładowe wykonania:
-	\begin{itemize}
+	\begin{enumerate}[label=\alph*), leftmargin=1cm]
 		\item Watykan 2011 -- \href{https://youtu.be/4DvRrrdOfbo}{https://youtu.be/4DvRrrdOfbo}
 		\item Watykan 2013 -- \href{https://youtu.be/k89SA3lBdKI}{https://youtu.be/k89SA3lBdKI}
 		\item Frombork 2015 -- \href{https://youtu.be/kpDhlek1h0w}{https://youtu.be/kpDhlek1h0w}
-		\item Pogórze 2018 -- \href{https://youtu.be/MJ4hgMCgcRI}{https://youtu.be/MJ4hgMCgcRI}
-	\end{itemize}
+		\item Pogórze 2018 -- \href{https://youtu.be/MJ4hgMCgcRI}{https://youtu.be/MJ4hgMCgcRI}	
+	\end{enumerate}
 \end{document}
