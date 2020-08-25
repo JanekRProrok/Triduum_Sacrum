@@ -1,0 +1,126 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PREAMBUŁA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                          W tej części dokumentu określasz jego rodzaj i styl,                                         %
+%                                        dołączasz pakiety rozszerzające możliwości LaTeXa, etc.                                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt,oneside,notitlepage,a4paper,wide]{mwart}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{enumitem}
+	\setlist{nolistsep}
+	\renewcommand{\labelitemi}{$\bullet$}
+	% \renewcommand{\labelitemii}{$\bullet$}
+	
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{setspace}
+
+\onehalfspacing
+\setlength{\parindent}{0 cm} % Rozmiar wcięcia akapitów.
+
+% \usepackage{indentfirst} % Pakiet definiujący wcięcie pierwszego akapitu zaraz po nagłówku sekcji, często stosowane
+% w pracach naukowych - https://ctan.org/pkg/indentfirst
+
+% \usepackage{fancyhdr} % Pakiet dający większą kontrolę nad wyglądem i użyciem nagłówka i stopki - https://www.ctan.org/pkg/fancyhdr
+
+\usepackage{pdfpages} % Pakiet pozwalający na włączanie do pliku innych dokumentów w formacie PDF – https://www.ctan.org/pkg/pdfpages
+
+\usepackage[]{hyperref}
+\usepackage{xcolor}
+	\definecolor{orangelink}{rgb}{0.7,0.18,0.1}
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\hypersetup{ % Ustawienia pliku PDF - http://www.tug.org/applications/hyperref/manual.html#x1-120003.8
+		pdftitle={Szablon}, % Tytuł dokumentu
+			pdfdisplaydoctitle=true, % Wyświetlaj lub nie wyświetlaj w nagłówku okna tytuł dokumentu zamiast tytułu pliku
+		pdfauthor={pitrk, JanekR_Prorok},
+  		pdfsubject={Source: https://github.com/JanekRProrok/Triduum_Sacrum},
+    	pdfcreator={Texmaker, MiKTeX},
+		% pdfproducer={}, % producer of the document
+		% pdfinfo={}, % Alternative interface for setting the document information
+		% pdfkeywords={}, % Słowa kluczowe dokumentu  
+		bookmarks=true,	% Pokaż lub ukryj pasek zakładek w trakcie wyświetlania tego dokumentu Acrobatem
+		bookmarksnumbered=true, % Wyświetlaj lub nie wyświetlaj numerów rozdziałów w tytułach zakładek
+		bookmarksopen=true, % Otwórz rozwinięte lub zwinięte drzewko zakładek.
+			bookmarksopenlevel=1, % Wybierz do którego poziomu zakładek drzewko ma być rozwinięte.
+		pdfpagelabels=true, % set PDF page labels                   
+		pdfpagemode=UseOutlines, % Determines how the file is opening in Acrobat; the possibilities are UseNone,
+% UseThumbs (show thumbnails), UseOutlines (show bookmarks), FullScreen, UseOC (PDF 1.5), and UseAttachments (PDF 1.6).
+% If no mode if explicitly chosen, but the bookmarks option is set, UseOutlines is used.
+		unicode=true, % Pozwól w zakładkach Acrobata używać znaków z alfabetów niełacińskich
+		pdftoolbar=true, % Pokaż bądź ukryj pasek narzędziowy Acrobata
+		pdfmenubar=true, % Pokaż bądź ukryj menu Acrobata
+		pdffitwindow=false, % Dostosuj wielkość wyświetlanego PDFa dowielkości okna
+		pdfstartview=Fit, % fits the width of the page to the window
+		pdfnewwindow=true, % Czy w wypadku gdy łącze prowadzi poza dokument, ma być otwierane nowe okno
+		colorlinks=true, % Czy otoczyć hiperłącza kolorowymi ramkami (false) czy kolorować same hiperłącza (true)
+		linkcolor=orangelink, % Definicja koloru łączy wewnętrznych (rozdziałów, punktów, stron itp.)
+		citecolor=orangelink, % Definicja koloru cytowań, czyli odsyłaczy do bibliografii
+		filecolor=orangelink, % Definicja koloru odsyłaczy do plików
+		urlcolor=orangelink, % Definicja koloru łączy typu url
+		pdfpagelayout=OneColumn, % Ustawienie domyślnego wyświetlania stron PDFu
+			% Dostępne opcje (warto zwrócić uwagę na ustawienie stylu oneside/twoside i dobrać odpowiednią):
+				% SinglePage - Wyświetlaj pojedynczą stronę, przesuwanie przewraca stronę
+				% OneColumn - Wyświetlaj dokument jako ciągłą kolumnę
+				% TwoColumnLeft - Wyświetlaj dokument w dwóch ciągłych kolumnach, nieparzyste strony po lewej stronie.
+				% TwoColumnRight - Wyświetlaj dokument w dwóch ciągłych kolumnach, nieparzyste strony po prawej stronie.
+				% TwoPageLeft	- Wyświetlaj dwie strony, nieparzyste strony po lewej stronie (od PDF 1.5).
+				% TwoPageRight - Wyświetlaj dwie strony, nieparzyste strony po prawej stronie (od PDF 1.5).
+		% pdfstartpage=1, % Numer strony, na którym dokument ma się domyślnie otworzyć
+		% pdfnumcopies=2, % Domyślna liczba drukowanych kopii
+		% filebordercolor=, % color of border around file links
+		% filecolor=, % color of file links
+		% linkbordercolor=, % color of border around links
+		% menubordercolor=, % color of border around menu links
+		% menucolor=, % color for menu links
+		% pagebackref=, % backreference by page number
+		% pdfcenterwindow=false, % position the document window in the center of the screen
+		% pdfdirection=, % direction setting   
+		% baseurl=, % Sets the base URL of the PDF document
+		% pdftrapped=, % Sets the document information Trapped entry. Possible values are True, False and Unknown.
+% An empty value means, the entry is not set.
+	}
+
+
+% \usepackage[printwatermark]{xwatermark} % Pakiet umożliwiający dodanie znaku wodnego - https://www.ctan.org/pkg/xwatermark
+	% \newwatermark[allpages,angle=45,scale=3,xpos=0,ypos=0]{Wersja robocza}  % Dodanie znaku wodnego pod treścią
+	% \newwatermark*[allpages,angle=45,scale=3,xpos=0,ypos=0]{Wersja robocza} % Dodanie znaku wodnego nad wszystkim
+
+
+% Inne przydatne, bardziej specjalistyczne pakiety:
+%	- musixtex - Pakiet umożliwiający zapis nutowy w dokumentach LaTeX - https://ctan.org/pkg/musixtex
+%	- gregoriotex - Pakiet umożliwiający zapis Chorału Gregoriańskiego w dokumentach LaTeX - http://gregorio-project.github.io/
+
+
+	% Wypełnienie ...... - \dotline{długość + 0,1 cm}.
+\def\dotfill#1{\cleaders\hbox to #1{.}\hfill}
+\newcommand\dotline[2][0,1cm]{\leavevmode\hbox to #2 {\dotfill{#1}\hfil}}
+
+	% Rubryki
+% \newcommand{\rubryka}[1]{\textcolor{red}{#1}}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TREŚĆ DOKUMENTU %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+% \sloppy % - Wymuszenie nieprofesjonalnego trzymania się w marginesach jak w MS Word (kosztem dziwnie rozciągniętych odstępów -
+	% LaTeX uważa, że lepiej wyjątkowo wyjść ze zbyt długim wyrazem kawałek na margines niż umieszczać między wyrazami
+	% kilkucentymetrowe odstępy).
+
+% pdftitle={Missa Vespertina in Cena Domini}
+	{\centering\LARGE{\textbf{Missa Vespertina in Cena Domini}}\\\smallskip\large{Msza wieczorna w Wielki Czwartek}\par\vspace{5mm}}
+	
+% pdftitle={Feria sexta in Passione et Morte Domini}
+	{\centering\LARGE{\textbf{Feria sexta in Passione et Morte Domini}}\\\smallskip\large{Wielki Piątek Męki i Śmierci Pańskiej}\par\vspace{5mm}}
+	
+% pdftitle={Dominica Paschæ in Resurrectione Domini - Ad Vigiliam Paschalem in Nocte Santa}
+	{\centering\LARGE{\textbf{Dominica Paschæ in Resurrectione Domini\\Ad Vigiliam Paschalem in Nocte Santa}}\\\smallskip\large{Niedziela Zmartwychwstania Pańskiego\\Wigilia Paschalna w Wielką Noc}\par\vspace{5mm}}
+
+Treść materiałów
+% \rubryka{Tekst rubryki}
+\end{document}
